@@ -35,7 +35,7 @@ class ExcelDriver:
             sheet.title = 'default'
             sheet.append(self.header)
             # if modify cell width, write down
-            #['저자', '내용', '좋아요/조회수', '해쉬태그', '댓글']
+            #sheet.column_dimensions['col'].width = width
             sheet.column_dimensions['A'].width = 20
             sheet.column_dimensions['B'].width = 40
             sheet.column_dimensions['C'].width = 10
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     FILENAME = "인스타그램" # without file extention
     headerList = ['저자', '내용', '좋아요/조회수', '해쉬태그', '댓글'] #엑셀 맨위 머릿글
     COMMENT_MAX = 5 # 5개까지만 가져온다
-    
+
     ''' Run '''
     excel = ExcelDriver(FILENAME,headerList) # excel init
 
